@@ -48,25 +48,52 @@
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<h3>スケジュール提出・管理アプリ</h3>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>使用スキル</p>
-								<ul>
-									<li>html&css</li>
-									<li>php</li>
-									<li>Laravel</li>
-									<li>mysql</li>
-									<li>javascript</li>
-									<li>jQuery</li>
-								</ul>
-								<p>個人経営の飲食店での従業員のスケジュール管理を想定して制作しました。</p>
-								<p>一般ユーザー(従業員)：Lineログイン、今月のスケジュールの確認、スケジュールの提出</p>
-								<p>管理者（店長等）：管理者ログイン、提出されたスケジュールの確認</p>
+								<div class="tabs">
+									<input class="tab" type="radio" id="tab1" name="tab" checked>
+									<label for="tab1">スケジュール提出・管理アプリ</label>
+									<input class="tab" type="radio" id="tab2" name="tab">
+									<label for="tab2">iSara模写製作</label>
+									<div class="tab-content" id="schedule">
+										<span class="image main"><img src="images/header.jpeg" alt="" /></span>
+										<p>使用スキル</p>
+										<ul>
+											<li>html&css</li>
+											<li>php</li>
+											<li>Laravel</li>
+											<li>mysql</li>
+											<li>javascript</li>
+											<li>jQuery</li>
+										</ul>
+										<p>個人経営の飲食店での従業員のスケジュール管理を想定して制作しました。</p>
+										<p>一般ユーザー(従業員)：Lineログイン、今月のスケジュールの確認、スケジュールの提出</p>
+										<p>管理者（店長等）：管理者ログイン、提出されたスケジュールの確認</p>
+										<p>herokuにてサンプルサイトを公開する予定です</p>
+									</div>
+									<div class="tab-content" id="isara">
+										<span class="image main"><img src="images/isara_pc.png" alt="isara"></span>
+										<p><a href="isara.life">iSara.life</a></p>
+										<p><a href="#isara">isara模写製作フルページスクリーンショット</a></p>
+									</div>
+								</div>
 							</article>
+						
+						<!-- iSara Captuer-->
+						<article id="isara">
+							<h2>iSara模写スクリーンショット</h2>
+							<input class="tab" type="radio" name="isara" id="isara_pc" checked>
+							<label for="isara_pc">PC</label>
+							<input class="tab" type="radio" name="isara" id="isara_sp">		
+							<label for="isara_sp">SP</label>
+							<div class="tab-content" id="pc">
+								<span class="image main"><img src="images/isara_cap_pc.png" alt="pc"></span>
+							</div>
+							<div class="tab-content" id="sp">
+								<span class="image main"><img src="images/isara_cap_sp.png" alt="sp"></span>
+							</div>
+						</article>
 
 						<!-- About -->
 							<article id="about">

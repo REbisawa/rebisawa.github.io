@@ -290,12 +290,18 @@
 			$main_articles.each(function() {
 
 				var $this = $(this);
-
 				// Close.
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							let pid = $(this).parent().attr('id');
+							var hash = '#';
+							if(pid == 'isara'){
+								hash = '#work';
+							}else{
+								hash = '#';
+							}
+							location.hash = hash;
 						});
 				// Prevent clicks from inside article from bubbling.
 					$this.on('click', function(event) {
@@ -408,7 +414,7 @@
 	// 	$('.logo').find('span').addClass('icon fa-folder');
 	// });
 
-	$('.inner').each(function(){
+	$('.flow').each(function(){
 		var sliderWidth = $(this).width();
 		$(this).clone(true).insertBefore(this);
 		$(this).clone(true).insertAfter(this);

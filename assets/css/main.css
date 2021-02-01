@@ -646,8 +646,8 @@ input, select, textarea {
 
 		.image:before {
 			pointer-events: none;
-			background-image: url("../../images/overlay.png");
-			background-color: rgba(19, 21, 25, 0.5);
+			/* background-image: url("../../images/overlay.png"); */
+			/* background-color: rgba(19, 21, 25, 0.5); */
 			border-radius: 4px;
 			content: '';
 			display: block;
@@ -1662,7 +1662,7 @@ input, select, textarea {
 		.content{
 			display: flex;
 		}
-		.inner {
+		.flow {
 			/* width: 100vw; */
 			display: flex;
 			padding: 3rem 0 !important;
@@ -1672,16 +1672,16 @@ input, select, textarea {
 		.item{
 			margin-right: 30px;
 		}
-		.inner::hover .item{
+		.flow::hover .item{
 			animation-play-state: paused;
 		}
-		.inner:first-child{
+		.flow:first-child{
 			animation: loop 90s linear infinite;
 		}
-		.inner:nth-child(2){
+		.flow:nth-child(2){
 			animation: loop2 90s -60s linear infinite;
 		}
-		.inner:last-child{
+		.flow:last-child{
 			animation: loop3 90s -30s linear infinite;
 		}
 
@@ -1708,4 +1708,63 @@ input, select, textarea {
 			to {
 				transform: translateX(-300%);
 			}
+		}
+
+		.tabs	input[name="tab"] + label::before,
+		#isara input[name="isara"] + label::before{
+			display: none;
+		}
+		.tab-content{
+			display: none;
+			clear: both;
+			background-color: rgba(245, 245, 245, 0.2);
+			padding: 0 10px;
+		}
+		.tab-content > img{
+			padding-top: 5px !important;
+		}
+		#tab1:checked ~ #schedule,
+		#tab2:checked ~ #isara,
+		#isara_pc:checked ~ #pc,
+		#isara_sp:checked ~ #sp
+		{
+			display: block;
+		}
+
+		.tab:checked + label{
+			background-color: whitesmoke !important;
+			color: #000;
+		}
+
+		.tabs label:hover,
+		#isara label:hover{
+			cursor: pointer;
+			opacity: 0.75;
+		}
+		.tabs label,
+		#isara label{
+			border-bottom: whitesmoke  3px solid;
+			background: gray;
+			display: block;
+			width: calc(100%/2);
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin:10px 0 !important;
+			padding: 0 10px !important;
+			box-sizing: border-box;
+			float: left;
+		}
+		#isara .tab-content{
+			height: 75vh;
+			overflow-y: scroll;
+		}
+		#sp img{
+			margin: 0 auto;
+		}
+		#isara h2{
+			text-transform: none !important;
+		}
+		#isara .image{
+			margin-bottom: 0;
 		}
