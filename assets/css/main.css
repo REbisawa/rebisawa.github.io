@@ -1725,6 +1725,7 @@ input, select, textarea {
 		}
 		#tab1:checked ~ #schedule,
 		#tab2:checked ~ #isara,
+		#tab3:checked ~ #digsmile,
 		#isara_pc:checked ~ #pc,
 		#isara_sp:checked ~ #sp
 		{
@@ -1744,6 +1745,7 @@ input, select, textarea {
 		.tabs label,
 		#isara label{
 			border-bottom: whitesmoke  3px solid;
+			border-left: dimgray 1px solid;
 			background: gray;
 			display: block;
 			width: calc(100%/2);
@@ -1754,6 +1756,9 @@ input, select, textarea {
 			padding: 0 10px !important;
 			box-sizing: border-box;
 			float: left;
+		}
+		.tabs label{
+			width: calc(100%/3);
 		}
 		#isara .tab-content{
 			height: 75vh;
