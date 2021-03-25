@@ -1726,6 +1726,7 @@ input, select, textarea {
 		#tab1:checked ~ #schedule,
 		#tab2:checked ~ #isara,
 		#tab3:checked ~ #digsmile,
+		#tab4:checked ~ #austine,
 		#isara_pc:checked ~ #pc,
 		#isara_sp:checked ~ #sp
 		{
@@ -1758,7 +1759,7 @@ input, select, textarea {
 			float: left;
 		}
 		.tabs label{
-			width: calc(100%/3);
+			width: calc(100%/4);
 		}
 		#isara .tab-content{
 			height: 75vh;
